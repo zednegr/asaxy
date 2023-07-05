@@ -9,6 +9,9 @@ function App() {
   return (
     <>
        <h1>Salom Bolar</h1>
+       <div className="container">
+          Lorem ipsum dolor sit amet.
+       </div>
     </>
   )
 }
