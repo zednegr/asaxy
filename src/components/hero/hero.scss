@@ -10,12 +10,12 @@
     gap: 30px;
 }
 
-.mySwiper {
-    width: 1014px;
-    height: 400px;
-
-    .SwipeSlide {
+.hero_swiper {
+    
+    .hero-slide {
         img {
+            height: 400px;
+            width: 1014px;
             border-radius: 20px;
             cursor: pointer;
         }
