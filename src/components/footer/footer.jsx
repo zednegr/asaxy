@@ -97,3 +97,5 @@ function Footer() {
         </section>
     )
 }
+
+export default Footer
