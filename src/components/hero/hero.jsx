@@ -18,13 +18,13 @@ function Hero() {
                                 dynamicBullets: true,
                             }}
                             modules={[Pagination]}
-                            className="mySwiper"
+                            className="hero_swiper"
                         >
-                            <SwiperSlide className='SwipeSlide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/64a25f5857261.jpg.webp" alt="error" /></SwiperSlide>
-                            <SwiperSlide className='SwipeSlide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/64a268d30112e.jpg.webp" alt="error" /></SwiperSlide>
-                            <SwiperSlide className='SwipeSlide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/6486eb5d15718.jpg.webp" alt="error" /></SwiperSlide>
-                            <SwiperSlide className='SwipeSlide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/6454e5f4a7457.jpg.webp" alt="error" /></SwiperSlide>
-                            <SwiperSlide className='SwipeSlide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/64748df45849f.jpg.webp" alt="error" /></SwiperSlide>
+                            <SwiperSlide className='hero-slide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/64a25f5857261.jpg.webp" alt="error" /></SwiperSlide>
+                            <SwiperSlide className='hero-slide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/64a268d30112e.jpg.webp" alt="error" /></SwiperSlide>
+                            <SwiperSlide className='hero-slide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/6486eb5d15718.jpg.webp" alt="error" /></SwiperSlide>
+                            <SwiperSlide className='hero-slide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/6454e5f4a7457.jpg.webp" alt="error" /></SwiperSlide>
+                            <SwiperSlide className='hero-slide'><img src="https://assets.asaxiy.uz/uploads/banner/desktop/64748df45849f.jpg.webp" alt="error" /></SwiperSlide>
                         </Swiper>
                         
                         <div className="hero-sale">
