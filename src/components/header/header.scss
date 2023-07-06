@@ -3,14 +3,22 @@
 }
 
 .navbar {
-    background-color: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 17px 0 18px 0;
 
+    form {
+        width: 620px;
+        height: 46px;
+        display: flex;
+        gap: 15px;
+        background-color: #008DFF;
+        border-radius: 10px;
+    }
+
     .nav-search {
-        width: 267px;
+        width: 507px;
         height: 40px;
         outline: none;
         border: 3px solid #008DFF;
@@ -20,6 +28,27 @@
         font-weight: 400;
         color: #87898d;
 
+    }
+
+    .search-link {
+        padding: 9px 22px;
+        background-color: #008DFF;
+        border-radius: 0px 10px 10px 0px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: end;
+    }
+
+    .search-btn {
+        position: relative;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 12px;
+        left: 2px;
     }
 
     .nav-search::-webkit-input-placeholder {
@@ -41,12 +70,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #fff;
             cursor: pointer;
             padding: 6px 10px;
 
             img {
-                width: 24px;
+                width: 20px;
             }
         }
     }

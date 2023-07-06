@@ -6,6 +6,7 @@ import Language from "../../assets/svg/nav-language.svg"
 import Cart from "../../assets/svg/nav-cart.svg"
 import Like from "../../assets/svg/nav-like.svg"
 import User from "../../assets/svg/nav-user.svg"
+import SearchIcon from "../../assets/svg/search-icon.svg"
 
 
 function Header() {
@@ -28,6 +29,13 @@ function Header() {
                         <form>
 
                             <input className='nav-search' type="text" placeholder='Search...' />
+
+                            <div className="search-btn">
+
+                                <a className='search-link' href="#">Search</a>
+                                <img className='search-icon' width={'19px'} src={SearchIcon} alt="icon" />
+
+                            </div>
 
                         </form>
 
