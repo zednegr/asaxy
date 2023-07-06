@@ -28,6 +28,7 @@
 }
 
 .footer-links-title1 {
+    width: 199px;
     color: #0d0d0d;
     font-size: 20px;
     font-style: normal;
@@ -36,7 +37,9 @@
 }
 
 .footer-links-content-a {
+    // width: 349px;
     display: flex;
+    gap: 8px;
     align-items: center;
     color: #64748b;
     font-family: Inter;
