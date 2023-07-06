@@ -82,11 +82,25 @@ function Footer() {
                                 <h3 className="footer-links-title1">Виды оплаты</h3>
 
                                 <div className="footer-links-item2">
-                                    <div className="footer-linkss-item2-content"></div>
-                                    <div className="footer-links-item2-contents"></div>
-                                    <div className="footer-links-item2-contents"></div>
-                                    <div className="footer-links-item2-contents"></div>
-                                    <div className="footer-links-item2-contents"></div>
+                                    <div className="footer-links-item2-contents">
+                                        <img src="https://asaxiy.uz/custom-assets/images/payme.svg" alt="error" />
+                                        <a href="#"></a>
+                                    </div>
+                                    <div className="footer-links-item2-contents">
+                                        <img src="https://asaxiy.uz/custom-assets/images/visa.svg" alt="error" />
+                                        <a href="#"></a>
+                                    </div>
+                                    <div className="footer-links-item2-contents">
+                                        <a href="#"><img src="https://asaxiy.uz/custom-assets/images/mastercard.svg" alt="error" /></a>
+                                    </div>
+                                    <div className="footer-links-item2-contents">
+                                        <a href="#"><img src="https://asaxiy.uz/custom-assets/images/humo.svg" alt="error" /></a>
+                                    </div>
+                                    <div className="footer-links-item2-contents">
+                                        <a href="#">
+                                            <img src="https://asaxiy.uz/custom-assets/images/uzcard.svg" alt="error" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
