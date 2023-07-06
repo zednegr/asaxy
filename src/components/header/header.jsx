@@ -51,6 +51,22 @@ function Header() {
 
 
                     </nav>
+
+          {/* <- ==================== Navbar Bottom ===================== -> */}
+
+                    <div className="nav-bottom">
+
+                        <ul className='bottom-nav_list'>
+
+                            <li><a id='item-1' href="#">Все категории</a></li>
+                            <li><a id='item-2' href="#">Скидки</a></li>
+                            <li><a id='item-3' href="#">Кондиционеры</a></li>
+                            <li><a id='item-4' href="#">Новинки</a></li>
+                            <li><a id='item-5' href="#">Книги</a></li>
+                            <li><a id='item-6' href="#">Телефоны и гаджеты</a></li>
+                            <li><a id='item-7' href="#">Ноутбуки</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 

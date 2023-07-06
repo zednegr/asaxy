@@ -1,5 +1,5 @@
 .header-section {
-    background-color: aqua;
+    background-color: #FFF;
 }
 
 .navbar {
@@ -7,75 +7,167 @@
     justify-content: space-between;
     align-items: center;
     padding: 17px 0 18px 0;
+    border-bottom: 1px solid #E6E8EE;
 
-    form {
-        width: 620px;
-        height: 46px;
-        display: flex;
-        gap: 15px;
-        background-color: #008DFF;
-        border-radius: 10px;
-    }
-
-    .nav-search {
-        width: 507px;
-        height: 40px;
-        outline: none;
-        border: 3px solid #008DFF;
-        border-radius: 10px;
-        padding: 20px;
-        font-size: 13px;
-        font-weight: 400;
-        color: #87898d;
-
-    }
-
-    .search-link {
-        padding: 9px 22px;
-        background-color: #008DFF;
-        border-radius: 0px 10px 10px 0px;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: end;
-    }
-
-    .search-btn {
-        position: relative;
-    }
-
-    .search-icon {
-        position: absolute;
-        top: 12px;
-        left: 2px;
-    }
-
-    .nav-search::-webkit-input-placeholder {
-        font-size: 13px;
-        font-weight: 400;
-        color: #C2C6D1;
-    }
-
-    .icons {
-        display: flex;
-        gap: 10px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21px;
-        text-align: center;
-
-        .icon {
-            width: 80px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    .brand {
+        img {
             cursor: pointer;
-            padding: 6px 10px;
-
-            img {
-                width: 20px;
-            }
         }
+    }
+}
+
+form {
+    width: 620px;
+    height: 46px;
+    display: flex;
+    background-color: #008DFF;
+    border-radius: 10px;
+    gap: 15px;
+    transition: all 0.2s ease-in-out;
+    z-index: 0;
+
+    &:hover {
+        background-color: #0059a1;
+    }
+}
+
+.nav-search {
+    width: 507px;
+    height: 40px;
+    outline: none;
+    border: 3px solid #008DFF;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #87898d;
+    z-index: 1;
+
+}
+
+.search-link {
+    width: 103px;
+    height: 44px;
+    padding: 9px 22px;
+    border-radius: 0px 10px 10px 0px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+
+}
+
+.search-btn {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    cursor: pointer;
+}
+
+.nav-search::-webkit-input-placeholder {
+    font-size: 13px;
+    font-weight: 400;
+    color: #C2C6D1;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+
+    .icon {
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        padding: 6px 10px;
+
+        img {
+            width: 20px;
+        }
+    }
+}
+
+// <- ====================== Navbar Bottom ===================== ->
+.nav-bottom {
+    // background: #FFF;
+    box-shadow: 0px 10px 30px 0px rgba(209, 213, 223, 0.50);
+}
+
+.bottom-nav_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    padding: 17px 17px;
+
+    a {
+        color: #000;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: #008DFF;
+        }
+    }
+
+    #item-1 {
+        width: 117px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+
+    #item-2 {
+        width: 55px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+
+    #item-3 {
+        width: 112px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+
+    #item-4 {
+        width: 64px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+
+    #item-5 {
+        width: 43px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+
+    #item-6 {
+        width: 157px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
+    }
+
+    #item-7 {
+        width: 71px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19px;
     }
 }
