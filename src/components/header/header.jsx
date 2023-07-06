@@ -6,6 +6,7 @@ import Language from "../../assets/svg/nav-language.svg"
 import Cart from "../../assets/svg/nav-cart.svg"
 import Like from "../../assets/svg/nav-like.svg"
 import User from "../../assets/svg/nav-user.svg"
+import SearchIcon from "../../assets/svg/search-icon.svg"
 
 
 function Header() {
@@ -29,6 +30,13 @@ function Header() {
 
                             <input className='nav-search' type="text" placeholder='Search...' />
 
+                            <div className="search-btn">
+
+                                <a className='search-link' href="#">Search</a>
+                                <img className='search-icon' width={'19px'} src={SearchIcon} alt="icon" />
+
+                            </div>
+
                         </form>
 
                         <div className="icons">
@@ -43,6 +51,22 @@ function Header() {
 
 
                     </nav>
+
+          {/* <- ==================== Navbar Bottom ===================== -> */}
+
+                    <div className="nav-bottom">
+
+                        <ul className='bottom-nav_list'>
+
+                            <li><a id='item-1' href="#">Все категории</a></li>
+                            <li><a id='item-2' href="#">Скидки</a></li>
+                            <li><a id='item-3' href="#">Кондиционеры</a></li>
+                            <li><a id='item-4' href="#">Новинки</a></li>
+                            <li><a id='item-5' href="#">Книги</a></li>
+                            <li><a id='item-6' href="#">Телефоны и гаджеты</a></li>
+                            <li><a id='item-7' href="#">Ноутбуки</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 

@@ -1,0 +1,30 @@
+.hero-section {
+    margin-top: 6px;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    background-color: #F4F7FD;
+}
+
+.hero-slider {
+    display: flex;
+    gap: 30px;
+}
+
+.mySwiper {
+    width: 1014px;
+    height: 400px;
+
+    .SwipeSlide {
+        img {
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.hero-sale {
+    img {
+        width: 280px;
+        height: 395px;
+    }
+}
