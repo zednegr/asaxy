@@ -25,7 +25,7 @@ function Footer() {
                                     <a className="footer-links-content-a" href="#">Пункты выдачи</a>
                                     <a className="footer-links-content-a" href="#">Блог</a>
                                     <a className="footer-links-content-a" href="#">Наши бренды</a>
-                                    <a className="footer-links-content-a" href="#">Публичная оферта (Пользовательское соглашение)</a>
+                                    <a className="footer-links-content-a" href="#" >Публичная оферта (Пользовательское соглашение)</a>
                                     <a className="footer-links-content-a" href="#">Оферта для покупок в рассрочку</a>
                                     <a className="footer-links-content-a" href="#">О нас</a>
                                 </div>
