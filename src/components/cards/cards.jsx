@@ -12,8 +12,8 @@ function Cards() {
     return (
         <section className="section-1">
             <div className="container">
+                        <h3 className="skitka">Скидки</h3>
                 <div className="hero-1">
-
                     {
                         data.map((item) => {
                             return (

@@ -112,13 +112,25 @@ h5 {
     line-height: 18px;
     text-transform: uppercase;
 }
-.icon-btn{
+
+.icon-btn {
     position: absolute;
     margin-left: 200px;
 }
-.heart-btn{
+
+.heart-btn {
     position: absolute;
     margin-left: 200px;
     margin-top: 35px;
     cursor: pointer;
+}
+
+.skitka {
+    color: #858997;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.6px;
+    margin-top: 30px;
 }
