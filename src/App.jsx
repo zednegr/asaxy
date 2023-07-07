@@ -12,6 +12,8 @@ function App() {
        <div className="container">
           Lorem ipsum dolor sit amet.
        </div>
+
+       <div className='name' chegirma="chegirma">Name: </div>
     </>
   )
 }
