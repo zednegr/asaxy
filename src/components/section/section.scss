@@ -28,7 +28,7 @@
     flex-direction: column;
     gap: 7px;
     .section-links-title {
-        // width: 274px;
+        width: 250px;
         color: #282830;
         font-family: Inter;
         font-size: 16px;
@@ -38,6 +38,7 @@
     }
     .section-links-text {
         width: 162px;
+        display: flex;
         color: #858997;
         font-family: Inter;
         font-size: 14px;
