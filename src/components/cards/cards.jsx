@@ -18,13 +18,13 @@ function Cards() {
                         data.map((item) => {
                             return (
                                 <div className="content">
-                                    <h5>Скидка</h5>
+                                    <h5 className="skitki">Скидка</h5>
                                     <img className="icon-btn" src={button} alt="" />
                                     <img className="heart-btn" src={heart} alt="" />
                                     <img className="img" src={item.img} alt="error" width={250} height={250} />
                                 
-                                    <h4>{item.nomi}</h4>
-                                    <span>
+                                    <h4 className="item-title">{item.nomi}</h4>
+                                    <span className="icons-list">
                                 <img className="icon" src={icon} alt="" />
                                 <img className="icon" src={icon} alt="" />
                                 <img className="icon" src={icon} alt="" />
@@ -34,11 +34,11 @@ function Cards() {
 
                                     </span>
                                     <p className="sof-narx">{item.sof}</p>
-                                    <div>{item.narxi}</div>
+                                    <div className="item-price">{item.narxi}</div>
                                     {/* <p>{item.brend}</p> */}
 
 
-                                    <button>Купить в 1 клик</button>
+                                    <button className="kupit">Купить в 1 клик</button>
 
                                 </div>
 

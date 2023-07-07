@@ -12,7 +12,7 @@
     align-items: start;
     text-align: start;
     padding: 20px;
-    width: 260px;
+    width: 250px;
     height: 409px;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -29,7 +29,7 @@
 
 }
 
-h4 {
+.item-title {
     margin-bottom: 19.5px;
     color: #141821;
     // font-family: Inter;
@@ -39,7 +39,7 @@ h4 {
     line-height: 20px;
 }
 
-span {
+.icons-list {
     margin-bottom: 13px;
     color: #C2C6D1;
     // font-family: Inter;
@@ -50,7 +50,7 @@ span {
 }
 
 
-div {
+.item-price {
     color: #141821;
     // font-family: Inter;
     font-size: 18px;
@@ -74,9 +74,9 @@ div {
 
 
 
-button {
+.kupit {
     position: relative;
-    padding: 10px 70px 10px 50px;
+    padding: 10px 60px 10px 50px;
     text-align: center;
     color: #FFF;
     font-size: 13px;
@@ -97,13 +97,12 @@ button {
     align-items: start;
 }
 
-h5 {
+.skitki {
     position: absolute;
     padding: 2px 8px;
     border-radius: 5px;
     background: #FF9800;
-    z-index: 0;
-    margin-left: 0;
+    z-index: 0;     
     color: #FFF;
     // font-family: Inter;
     font-size: 12px;
@@ -115,12 +114,12 @@ h5 {
 
 .icon-btn {
     position: absolute;
-    margin-left: 200px;
+    margin-left: 190px;
 }
 
 .heart-btn {
     position: absolute;
-    margin-left: 200px;
+    margin-left: 190px;
     margin-top: 35px;
     cursor: pointer;
 }
