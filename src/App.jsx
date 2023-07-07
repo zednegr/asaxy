@@ -5,13 +5,14 @@ import Hero from './components/hero/hero'
 import Brands from './components/brands/brands'
 import Apps from './components/apps/apps'
 import Section from './components/section/section'
+import Cards from './components/cards/cards'
 
 function App() {
 
   return (
     <>
     <Header />
-    <Hero/>
+    <Hero />
     <Brands/>
     <Apps/>
     <Section/>
