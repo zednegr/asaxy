@@ -5,6 +5,7 @@ import Hero from './components/hero/hero'
 import Brands from './components/brands/brands'
 import Apps from './components/apps/apps'
 import Section from './components/section/section'
+import Cards from './components/cards/cards'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
     <Header />
     <Hero />
+    <Cards />
     <Brands/>
     <Apps/>
     <Section/>
