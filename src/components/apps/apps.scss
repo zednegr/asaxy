@@ -1,0 +1,34 @@
+.apps-box {
+    display: flex;
+    padding: 40px 30px;
+    justify-content: center;
+}
+
+.apps-link {
+    width: 1295px;
+    height: 250px;
+    display: flex;
+    gap: 104px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #008dff;
+}
+
+.apps-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.apps-text{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffff;
+}
+
+.apps-links-content{
+    display: flex;
+    gap: 20.3px;
+
+}

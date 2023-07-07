@@ -1,3 +1,28 @@
-.name::after {
-    content: attr(chegirma);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif !important;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+}
+
+.container {
+  width: 1362px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
