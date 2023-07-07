@@ -13,6 +13,7 @@ function App() {
     <>
     <Header />
     <Hero />
+    <Cards/>
     <Brands/>
     <Apps/>
     <Section/>
