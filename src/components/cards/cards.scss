@@ -6,6 +6,7 @@
 }
 
 .content {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -28,29 +29,30 @@
 
 }
 
-h4 {
+.item-title {
     margin-bottom: 19.5px;
     color: #141821;
-    font-family: Inter;
+    // font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
 }
 
-span {
+.icons-list {
     margin-bottom: 13px;
     color: #C2C6D1;
-    font-family: Inter;
+    // font-family: Inter;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
 }
 
-div {
+
+.item-price {
     color: #141821;
-    font-family: Inter;
+    // font-family: Inter;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -60,7 +62,7 @@ div {
 
 .sof-narx {
     color: #AF5679;
-    font-family: Inter;
+    // font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -72,9 +74,9 @@ div {
 
 
 
-button {
+.kupit {
     position: relative;
-    padding: 10px 70px 10px 50px;
+    padding: 10px 60px 10px 50px;
     text-align: center;
     color: #FFF;
     font-size: 13px;
@@ -95,28 +97,39 @@ button {
     align-items: start;
 }
 
-h5 {
+.skitki {
     position: absolute;
     padding: 2px 8px;
     border-radius: 5px;
     background: #FF9800;
     z-index: 0;
-    margin-left: 0;
     color: #FFF;
-    font-family: Inter;
+    // font-family: Inter;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
     text-transform: uppercase;
 }
-.icon-btn{
+
+.icon-btn {
     position: absolute;
-    margin-left: 200px;
+    margin-left: 190px;
 }
-.heart-btn{
+
+.heart-btn {
     position: absolute;
-    margin-left: 200px;
+    margin-left: 190px;
     margin-top: 35px;
     cursor: pointer;
+}
+
+.skitka {
+    color: #858997;
+    // font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21.6px;
+    margin-top: 30px;
 }

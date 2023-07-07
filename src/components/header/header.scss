@@ -3,7 +3,9 @@
     width: 100%;
     top: 0;
     z-index: 11;
-    background-color: #FFF
+    background-color: #FFF;
+    box-shadow: 0px 10px 30px 0px rgba(209, 213, 223, 0.50);
+
 }
 
 
@@ -105,9 +107,6 @@ form {
 }
 
 // <- ====================== Navbar Bottom ===================== ->
-.nav-bottom {
-    box-shadow: 0px 10px 30px 0px rgba(209, 213, 223, 0.50);
-}
 
 .bottom-nav_list {
     display: flex;
@@ -126,54 +125,5 @@ form {
         &:hover {
             color: #008DFF;
         }
-    }
-
-    #item-1 {
-        width: 117px;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 19px;
-    }
-
-    #item-2 {
-        width: 55px;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 19px;
-    }
-
-    #item-3 {
-        width: 112px;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 19px;
-    }
-
-    #item-4 {
-        width: 64px;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 19px;
-    }
-
-    #item-5 {
-        width: 43px;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 19px;
-    }
-
-    #item-6 {
-        width: 157px;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 19px;
-    }
-
-    #item-7 {
-        width: 71px;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 19px;
     }
 }
