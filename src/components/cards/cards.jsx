@@ -33,7 +33,7 @@ function Cards() {
                                 0 отзывов
 
                                     </span>
-                                    <p>{item.sof}</p>
+                                    <p className="sof-narx">{item.sof}</p>
                                     <div>{item.narxi}</div>
                                     {/* <p>{item.brend}</p> */}
 
