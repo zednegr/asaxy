@@ -1,7 +1,7 @@
 .hero-1 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 15px;
 }
 
@@ -11,7 +11,7 @@
     align-items: start;
     text-align: start;
     padding: 20px;
-    width: 260px;
+    width: 250px;
     height: 409px;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -47,7 +47,6 @@ span {
     font-weight: 500;
     line-height: 20px;
 }
-
 
 div {
     color: #141821;
