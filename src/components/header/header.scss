@@ -86,6 +86,7 @@ form {
 
 
     .icon {
+        position: relative;
         width: 80px;
         display: flex;
         flex-direction: column;
@@ -99,12 +100,122 @@ form {
         line-height: 21px;
         text-align: center;
 
+        .icon_title {
+            color: #000;
+        }
+
+        &:hover {
+            color: #0059a1;
+
+            svg path {
+                fill: #0059a1;
+            }
+        }
+
         img {
             width: 24px;
             height: 24px;
         }
     }
+
+    .sold-zero {
+        top: 0;
+        right: 22px;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        padding: 0 0 20px 0;
+        border-radius: 50px;
+        background: #008DFF;
+        color: #fff;
+        font-size: 10px;
+    }
+
 }
+
+.sold-hover {
+    position: fixed;
+    top: 8%;
+    left: -8%;
+    width: 350px;
+    height: 227px auto;
+    background-color: rgba(223, 241, 255, 44);
+    border-radius: 10px;
+    visibility: hidden;
+    transform: translateX(350%);
+
+    .sold-content {
+        background-color: whitesmoke;
+        width: 350px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 15px;
+
+    }
+
+    .sold-hover-close {
+        position: absolute;
+        right: 10px;
+    }
+
+    .sold-hover-about {
+        display: flex;
+        gap: 70%;
+        padding-bottom: 70px;
+        padding: 15px;
+
+        .sold-hover-h5 {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .sold-hover-p {
+            font-size: 12px;
+            color: #bbb;
+        }
+    }
+
+}
+
+.sold-hover-btns {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+    .sold-hover-btn {
+        padding: 9px 10px;
+        border: none;
+        margin-bottom: 10px;
+        background-color: #007bff;
+        border-radius: 9px;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        transition: color 0.4s linear;
+    }
+
+    .sold-hover-link {
+        padding: 9px 10px;
+        border: none;
+        border-radius: 9px;
+        color: #000;
+        text-align: center;
+        font-size: 18px;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    }
+}
+
+.sold-hover:target {
+    visibility: visible;
+    color: #000;
+}
+
 
 // <- ====================== Navbar Bottom ===================== ->
 
