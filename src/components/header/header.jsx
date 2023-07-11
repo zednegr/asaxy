@@ -1,9 +1,14 @@
+import {useRef,useEffect } from "react"
 import './header.scss'
 import NavLogo from "../../assets/svg/asaxy-logo.svg"
 import SearchIcon from "../../assets/svg/search-icon.svg"
 
 
 function Header() {
+
+    const elModal = useRef()
+
+    const elInner = useRef()
 
     return (
         <section className="header-section">
@@ -127,9 +132,23 @@ function Header() {
 
                                 Избранное</div>
 
-                            <div className="icon">
+                            <div className="icon" onClick={(evt)=>{
 
-                                <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                elModal.current.classList.add("modal-open")
+        
+                               const elEevn = evt.target.matches('.modal') || evt.target.matches('.close')
+
+                               if(elEevn){
+                                elModal.current.classList.remove('modal-open')
+                                console.log('ishladi');
+                               }
+                               else{
+                                console.log('error');
+                               }
+                               
+                            }}>
+
+                                <svg className="cabinet" width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="avatar.svg" clip-path="url(#clip0_3_2875)">
                                         <g id="Layer_x0020_1">
                                             <g id="_1732704023632">
@@ -146,7 +165,17 @@ function Header() {
                                 </svg>
 
 
-                                Кабинет</div>
+                                Кабинет
+
+                                <div className="modal" ref={elModal} >
+                                    <div className="modal-inner" ref={elInner}>
+                                        <h2>modal</h2>
+                                        <button className='close'>close</button>
+                                    </div>
+                                </div>
+
+                                </div>
+
                         </div>
 
                     </nav>
