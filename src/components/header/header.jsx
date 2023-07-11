@@ -1,4 +1,4 @@
-import {useRef,useEffect } from "react"
+import { useRef, useEffect } from "react"
 import './header.scss'
 import NavLogo from "../../assets/svg/asaxy-logo.svg"
 import SearchIcon from "../../assets/svg/search-icon.svg"
@@ -91,7 +91,7 @@ function Header() {
 
                                 O'zbekcha</div>
 
-                         <div className="icon">
+                            <div className="icon">
                                 <span className='sold-zero'>0</span>
 
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,20 +132,20 @@ function Header() {
 
                                 Избранное</div>
 
-                            <div className="icon" onClick={(evt)=>{
+                            <div className="icon" onClick={(evt) => {
 
                                 elModal.current.classList.add("modal-open")
-        
-                               const elEevn = evt.target.matches('.modal') || evt.target.matches('.close')
 
-                               if(elEevn){
-                                elModal.current.classList.remove('modal-open')
-                                console.log('ishladi');
-                               }
-                               else{
-                                console.log('error');
-                               }
-                               
+                                const elEevn = evt.target.matches('.modal') || evt.target.matches('.close')
+
+                                if (elEevn) {
+                                    elModal.current.classList.remove('modal-open')
+                                    console.log('ishladi');
+                                }
+                                else {
+                                    console.log('error');
+                                }
+
                             }}>
 
                                 <svg className="cabinet" width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,12 +169,26 @@ function Header() {
 
                                 <div className="modal" ref={elModal} >
                                     <div className="modal-inner" ref={elInner}>
-                                        <h2>modal</h2>
+                                        <div className="modal-inner-items">
+                                            <h2 className="modal-inner-items-title">Вход или создать личный кабинет</h2>
+
+                                            <form className="modal-inner-items-form">
+                                                <input type="number" />
+                                                <button className="modal-inner-form-btn">Получить код активации</button>
+                                            </form>
+                                            <div className="modal-inner-items-sites">
+                                                <img src="" alt="error" />
+                                                <img src="" alt="error" />
+                                            </div>
+                                        </div>
+                                        <div className="modal-inner-items2">
+
+                                        </div>
                                         <button className='close'>close</button>
                                     </div>
                                 </div>
 
-                                </div>
+                            </div>
 
                         </div>
 
@@ -183,7 +197,7 @@ function Header() {
                     <div id='sold-hover' className="sold-hover">
 
                         <div className="sold-content">
-                            
+
                         </div>
 
                         <a className='sold-hover-close' id='sold-close' href="#">X</a>
@@ -210,7 +224,7 @@ function Header() {
                         <ul className='bottom-nav_list'>
 
                             <li><a id='item-1' href="#">Все категории</a></li>
-                            <li><a id='item-2' href="#">Скидки</a></li> 
+                            <li><a id='item-2' href="#">Скидки</a></li>
                             <li><a id='item-3' href="#">Кондиционеры</a></li>
                             <li><a id='item-4' href="#">Новинки</a></li>
                             <li><a id='item-5' href="#">Книги</a></li>
