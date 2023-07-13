@@ -6,6 +6,8 @@ import Brands from './components/brands/brands'
 import Apps from './components/apps/apps'
 import Section from './components/section/section'
 import Cards from './components/cards/cards'
+import CardsInner from './components/cards/card-inner/card-inner'
+
 
 function App() {
 
