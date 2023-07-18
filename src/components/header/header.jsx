@@ -2,6 +2,8 @@ import { useRef, useEffect } from "react"
 import './header.scss'
 import NavLogo from "../../assets/svg/asaxy-logo.svg"
 import SearchIcon from "../../assets/svg/search-icon.svg"
+import google from "../../assets/imgs/modal-inner-form-google.png"
+import facebook from "../../assets/imgs/modal-inner-form-facebook.png"
 
 
 function Header() {
@@ -172,19 +174,23 @@ function Header() {
                                         <div className="modal-inner-items">
                                             <h2 className="modal-inner-items-title">Вход или создать личный кабинет</h2>
 
-                                            <form className="modal-inner-items-form">
-                                                <input type="number" />
+                                            <form className="modal-inner-items-form1">
+                                                <input className="modal-inner-form-input" type="number" placeholder="write your number" />
                                                 <button className="modal-inner-form-btn">Получить код активации</button>
                                             </form>
                                             <div className="modal-inner-items-sites">
-                                                <img src="" alt="error" />
-                                                <img src="" alt="error" />
+                                                <div className="sites-img">
+                                                    <img src={google} alt="error" />
+                                                </div>
+                                                <div className="sites-img">
+                                                    <img src={facebook} alt="error" />
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="modal-inner-items2">
-
+                                            <h4><span className="items2-img"><img src="https://asaxiy.uz/custom-assets/images/icons/market.svg" alt="error" /></span> Больше не нужно ходить на базар <span className="items2-text">У нас выгодные цены и доставка до дома</span></h4>
                                         </div>
-                                        <button className='close'>close</button>
+                                        {/* <button className='close'>close</button> */}
                                     </div>
                                 </div>
 

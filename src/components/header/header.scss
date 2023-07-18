@@ -3,18 +3,16 @@
     width: 100%;
     top: 0;
     z-index: 11;
-    background-color: #FFF;
-    box-shadow: 0px 10px 30px 0px rgba(209, 213, 223, 0.50);
-
+    background-color: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(209, 213, 223, 0.5);
 }
-
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 17px 0 18px 0;
-    border-bottom: 1px solid #E6E8EE;
+    border-bottom: 1px solid #e6e8ee;
 
     .brand {
         img {
@@ -27,7 +25,7 @@ form {
     width: 620px;
     height: 46px;
     display: flex;
-    background-color: #008DFF;
+    background-color: #008dff;
     border-radius: 10px;
     gap: 15px;
     transition: all 0.2s ease-in-out;
@@ -42,14 +40,13 @@ form {
     width: 507px;
     height: 40px;
     outline: none;
-    border: 3px solid #008DFF;
+    border: 3px solid #008dff;
     border-radius: 10px;
     padding: 20px;
     font-size: 13px;
     font-weight: 400;
     color: #87898d;
     z-index: 1;
-
 }
 
 .search-link {
@@ -77,13 +74,12 @@ form {
 .nav-search::-webkit-input-placeholder {
     font-size: 13px;
     font-weight: 400;
-    color: #C2C6D1;
+    color: #c2c6d1;
 }
 
 .icons {
     display: flex;
     gap: 10px;
-
 
     .icon {
         position: relative;
@@ -127,11 +123,10 @@ form {
         text-align: center;
         padding: 0 0 20px 0;
         border-radius: 50px;
-        background: #008DFF;
+        background: #008dff;
         color: #fff;
         font-size: 10px;
     }
-
 }
 
 .sold-hover {
@@ -151,7 +146,6 @@ form {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         padding: 15px;
-
     }
 
     .sold-hover-close {
@@ -175,7 +169,6 @@ form {
             color: #bbb;
         }
     }
-
 }
 
 .sold-hover-btns {
@@ -216,7 +209,6 @@ form {
     color: #000;
 }
 
-
 // <- ====================== Navbar Bottom ===================== ->
 
 .bottom-nav_list {
@@ -234,13 +226,12 @@ form {
         transition: all 0.3s ease-in-out;
 
         &:hover {
-            color: #008DFF;
+            color: #008dff;
         }
     }
 }
-
-
-.modal{
+// ===========================modal=============================
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -249,22 +240,99 @@ form {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:rgb(0, 0, 0, 0.3);
-    align-items:center;
+    background-color: rgb(0, 0, 0, 0.3);
+    align-items: center;
     justify-content: center;
 
-    &-open{
+    &-open {
         display: flex;
     }
 
-    .modal-inner{
+    .modal-inner {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        width:50%;
-        height:50%;
+        justify-content: space-between;
+        width: 50%;
         border-radius: 10px;
         background-color: #fff;
     }
 }
+
+.modal-inner-items {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 45px;
+
+    .modal-inner-items-title {
+        width: 350px;
+        font-size: 26px;
+        font-weight: 600;
+        font-style: normal;
+        color: #000;
+    }
+}
+
+.modal-inner-items-form1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+    border-bottom: 1px solid #87898d;
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    .modal-inner-form-input {
+        width: 300px;
+        height: 70px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: 2.4px solid #87898d;
+    }
+    .modal-inner-form-btn {
+        width: 300px;
+        height: 70px;
+        background-color: #0059a1;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-radius: 5px;
+        color: #fff;
+        border: none;
+    }
+}
+.modal-inner-items-sites {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    .sites-img {
+        width: 100px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #87898d;
+        border-radius: 5px;
+    }
+}
+
+.modal-inner-items2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 45px;
+    background-color: #87898d;
+}
+
+// ==============================modal=========================
