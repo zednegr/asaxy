@@ -101,6 +101,11 @@ function Footer() {
                                             <img src="https://asaxiy.uz/custom-assets/images/uzcard.svg" alt="error" />
                                         </a>
                                     </div>
+                                    <div className="footer-links-item2-contents">
+                                        <a href="#">
+                                            <img src="https://asaxiy.uz/custom-assets/images/uzum.svg" alt="error" />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
