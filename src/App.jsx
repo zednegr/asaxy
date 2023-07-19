@@ -6,7 +6,7 @@ import Brands from './components/brands/brands'
 import Apps from './components/apps/apps'
 import Section from './components/section/section'
 import Cards from './components/cards/cards'
-import CardsInner from './components/cards/card-inner/card-inner'
+import CardsInner from './components/card-inner/card-inner'
 
 
 function App() {
@@ -20,8 +20,9 @@ function App() {
     <Apps/>
     <Section/>
     <Footer />
-    </>
-
+    <CardsInner />
+  
+  </> 
   )
 }
 

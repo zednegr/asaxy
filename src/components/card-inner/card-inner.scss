@@ -1,0 +1,74 @@
+.hero-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.innner-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1392px;
+    margin-top: 83.5px;
+    gap: 15px;
+}
+
+.inner-title {
+    width: 426px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 9px;
+}
+
+.inner-img {
+    width: 453.33px;
+    height: 390px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inner-brand {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 35px;
+}
+
+.inner-price {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    color: #D9663B;
+    margin-top: 18.5px;
+}
+
+.inner-bor {
+    display: flex;
+    margin-top: 18px;
+}
+
+.inner-green {
+    color: #34D374;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.ovoz-bering {
+    margin-top: 19px;
+    color: #0F172A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    
+}
