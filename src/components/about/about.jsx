@@ -5,13 +5,16 @@ import "./about.scss"
 function About() {
 
     const elModal = useRef()
+    const elInner = useRef()
+    const elAccordin = useRef()
+    const elAccordi = useRef()
 
-    $(function () {
-        $(elModal).on("click", function () {
-            $(this).next().slideToggle();       
-        });
+    // (function () {
+    //     (".accordin-head").on("click", function () {
+    //         (this).next().slideToggle();       
+    //     });
 
-    });
+    // });
 
     return (
         <section className="section-about">
@@ -24,9 +27,18 @@ function About() {
                             что дает нам возможность всегда быть в курсе самых последних технологий и инновационных решений. Специалисты компании внимательно изучают желания
                             наших клиентов, поэтому ресурс постоянно обновляется качественными новинками, имеющими доступную стоимость.</p>
 
-                        <div class="accordin">
-                            <h3 ref={elModal} class="accordin-head">Header1</h3>
-                            <p class="accordin-content">
+                        <div class="accordin" >
+                            <h3  class="accordin-head" ref={elAccordin} onClick={(evt)=>{
+                                elModal.current.style.display = "flex"
+                                elInner.current.style.display = "none"
+                                elModal.current.style.borderLeft = "1px solid rgba(0, 0, 0, 0.13)"
+                                elModal.current.style.borderRight  = "1px solid rgba(0, 0, 0, 0.13)"
+                                elModal.current.style.borderBottom = "none"
+                                elAccordi.current.style.borderRadius = "0 0 10px 10px "
+                                
+                            }}>Принцип работы компании</h3>
+
+                            <p ref={elModal} class="accordin-content">
                                 ждый покупатель должен в комфортных условиях выбрать телефоны и гаджеты максимально быстро, поэтому мы создали интуитивно понятное меню, которое легко освоить новым пользователям сети. Для большего удобства мы раздели меню на соответствующие разделы, в которых вы найдете более 15 тысяч разновидностей оргтехники и сопутствующих товаров. Выглядят они следующим образом:
 
                                 • посуда – здесь вы найдете самые необходимые атрибуты домашнего обихода, без которого не обходится наша повседневная жизни. Товары, представленные на сайте нашего магазина, обладают высоким качеством и прочностью;
@@ -38,8 +50,16 @@ function About() {
                                 Также наша компания Asaxiy.uz позаботилась про любителей игровых сервисов, о чем может сказать раздел для геймеров. Здесь предоставлено мощное компьютерное обеспечение, игровые мыши и клавиатуры, которые позволят осуществлять игровой процесс с максимальной точностью и меткостью. А для любителей чтения мы предоставили усовершенствованную литературу в виде аудио книг, тематика жанра которых достаточно широка.
                             </p>
 
-                            <h3 ref={elModal} class="accordin-head">Header2</h3>
-                            <p class="accordin-content">
+                            <h3  class="accordin-head2" ref={elAccordi}  onClick={()=>{
+                                elModal.current.style.display = "none"
+                                elInner.current.style.display = "flex"
+                                elAccordi.current.style.borderRadius = "0 0 0 0"
+                                elInner.current.style.borderLeft = "1px solid rgba(0, 0, 0, 0.13)"
+                                elInner.current.style.borderRight = "1px solid rgba(0, 0, 0, 0.13)"
+                                elInner.current.style.borderRadius = "0 0 10px 10px "
+
+                            }}>Наши преимущества</h3>
+                            <p class="accordin-content" ref={elInner}>
                                 Компания Asaxiy.uz стремительно прорабатывает все свои возможности, и сегодня мы предлагаем своим клиентам значительные скидки и быструю доставку в ряды городов. В зону нашего обслуживания входят такие города как Андижане, Бухаре, Фергане, Джизак, Хорезм, Наманган, Навои, Кашкадарью, Самарканде, Сырдарье, Сурхандарье и всей Ташкентской области, а также Республика Каракалпакстан. И это неполная карта поставок. Уточнить все наши зоны обслуживания вы можете, позвонив специалисту интернет-магазина, который предоставит всю интересующую вас информацию.
                                 Каждый покупатель нашего магазина – достойный гость, которому мы предложим приятные скидки и бонусные программы. Мы полностью сопроводим весь процесс подбора товаров согласно требованиям клиентам и произведем доставку любым удобным способом.
                             </p>
