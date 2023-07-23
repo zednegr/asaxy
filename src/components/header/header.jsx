@@ -5,6 +5,12 @@ import SearchIcon from "../../assets/svg/search-icon.svg"
 import google from "../../assets/imgs/modal-inner-form-google.png"
 import facebook from "../../assets/imgs/modal-inner-form-facebook.png"
 
+import link11 from "../../assets/svg/section-link1-links-market.svg"
+import link12 from "../../assets/svg/section-link1-links-fast-delivery.svg"
+import link13 from "../../assets/svg/section-link1-links-return.svg"
+import link14 from "../../assets/svg/section-link1-links-card.svg"
+
+import close from "../../assets/imgs/modal-close-btn.png"
 
 function Header() {
 
@@ -137,15 +143,21 @@ function Header() {
                             <div className="icon" onClick={(evt) => {
 
                                 elModal.current.classList.add("modal-open")
+                                setTimeout(() => {
+                                    elInner.current.style.position = "static"
+                                    elInner.current.style.transition = "0.5s linear"
 
-                                const elEevn = evt.target.matches('.modal') || evt.target.matches('.close')
+                                }, 1000)
+
+                                console.log(evt.target);
+
+                                const elEevn = evt.target.matches('.modal') || evt.target.matches('.modal-close-btn') ||  evt.target.matches('.modal-close-btn-img') 
 
                                 if (elEevn) {
                                     elModal.current.classList.remove('modal-open')
-                                    console.log('ishladi');
                                 }
                                 else {
-                                    console.log('error');
+                                 
                                 }
 
                             }}>
@@ -170,28 +182,43 @@ function Header() {
                                 Кабинет
 
                                 <div className="modal" ref={elModal} >
-                                    <div className="modal-inner" ref={elInner}>
-                                        <div className="modal-inner-items">
-                                            <h2 className="modal-inner-items-title">Вход или создать личный кабинет</h2>
-
-                                            <form className="modal-inner-items-form1">
-                                                <input className="modal-inner-form-input" type="number" placeholder="write your number" />
-                                                <button className="modal-inner-form-btn">Получить код активации</button>
+                                    <ul className="modal-inner">
+                                        <li className="modal-links1">
+                                            <h2 className="modal-links1-title">Вход или создать личный кабинет</h2>
+                                            <form className="modal-links1-form">
+                                                <input type="text " placeholder="number" className="modal-links1-input" />
+                                                <button className="modal-links1-btn">olish</button>
                                             </form>
-                                            <div className="modal-inner-items-sites">
-                                                <div className="sites-img">
-                                                    <img src={google} alt="error" />
-                                                </div>
-                                                <div className="sites-img">
-                                                    <img src={facebook} alt="error" />
-                                                </div>
+                                            <div className="modal-links1-websites">
+                                                <span className="modal-links1-websites-span"><img src={google} alt="error" /></span>
+                                                <span className="modal-links1-websites-span"><img src={facebook} alt="error" /></span>
                                             </div>
-                                        </div>
-                                        <div className="modal-inner-items2">
-                                            <h4><span className="items2-img"><img src="https://asaxiy.uz/custom-assets/images/icons/market.svg" alt="error" /></span> Больше не нужно ходить на базар <span className="items2-text">У нас выгодные цены и доставка до дома</span></h4>
-                                        </div>
-                                        {/* <button className='close'>close</button> */}
-                                    </div>
+                                        </li>
+                                        <li className="modal-links2">
+                                            <button className="modal-close-btn" onClick={(()=>{
+                                                  elModal.current.classList.remove('modal-open')
+                                            })}><img className="modal-close-btn-img" src={close} alt="error"  /></button>
+                                            <ul className="modal-links2-link">
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link11} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Больше не нужно ходить на базар <span className="modal-links2-links-title-span">У нас выгодные цены и доставка до дома</span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link12} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Быстрая доставка<span className="modal-links2-links-title-span">Наш сервис удивит вас</span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link13} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Удобства для вас <span className="modal-links2-links-title-span">Быстрое оформление и гарантия на возврат в случае неисправности
+                                                    </span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"> <img src={link14} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Рассрочка<span className="modal-links2-links-title-span">Без предоплаты на 6 или 12 месяцев</span></h4>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
 
                             </div>
