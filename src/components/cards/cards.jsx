@@ -1,4 +1,4 @@
-import {NavLink , Outlet} from 'react-router-dom';
+// import {NavLink , Outlet} from 'react-router-dom';
 import "./cards.scss"
 import { comeData } from "../../data/data"
 import icon from "../../assets/svg/@2x.svg"
@@ -17,14 +17,17 @@ function Cards() {
                 <div className="hero-1">
                     {
                         data?.map((item) => {
+
+                            console.log(item.img);
+
                             return (
-                               <NavLink to={"/card-inner"}>
-                                <li className="list-nav">
-                                <div className="content">
+                            //    <NavLink to={"/card-inner"}>
+                               
+                                <div className="content" key={item.id}>
                                     <h5 className="skitki">Скидка</h5>
                                     <img className="icon-btn" src={button} alt="" />
                                     <img className="heart-btn" src={heart} alt="" />
-                                    <img className="img" src={item.img} alt="error" width={250} height={250} />
+                                    <img className="img" src={item?.img} alt="error" width={250} height={250} />
                                 
                                     <h4 className="item-title">{item.nomi}</h4>
                                     <span className="icons-list">
@@ -45,8 +48,7 @@ function Cards() {
 
                                 </div>
 
-                                </li>
-                               </NavLink>
+                            //  </NavLink>
                             )
                         })
                     }
