@@ -1,9 +1,22 @@
+import { useRef, useEffect } from "react"
 import './header.scss'
 import NavLogo from "../../assets/svg/asaxy-logo.svg"
 import SearchIcon from "../../assets/svg/search-icon.svg"
+import google from "../../assets/imgs/modal-inner-form-google.png"
+import facebook from "../../assets/imgs/modal-inner-form-facebook.png"
 
+import link11 from "../../assets/svg/section-link1-links-market.svg"
+import link12 from "../../assets/svg/section-link1-links-fast-delivery.svg"
+import link13 from "../../assets/svg/section-link1-links-return.svg"
+import link14 from "../../assets/svg/section-link1-links-card.svg"
+
+import close from "../../assets/imgs/modal-close-btn.png"
 
 function Header() {
+
+    const elModal = useRef()
+
+    const elInner = useRef()
 
     return (
         <section className="header-section">
@@ -86,7 +99,7 @@ function Header() {
 
                                 O'zbekcha</div>
 
-                         <div className="icon">
+                            <div className="icon">
                                 <span className='sold-zero'>0</span>
 
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,9 +140,29 @@ function Header() {
 
                                 Избранное</div>
 
-                            <div className="icon">
+                            <div className="icon" onClick={(evt) => {
 
-                                <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                elModal.current.classList.add("modal-open")
+                                setTimeout(() => {
+                                    elInner.current.style.position = "static"
+                                    elInner.current.style.transition = "0.5s linear"
+
+                                }, 1000)
+
+                                console.log(evt.target);
+
+                                const elEevn = evt.target.matches('.modal') || evt.target.matches('.modal-close-btn') ||  evt.target.matches('.modal-close-btn-img') 
+
+                                if (elEevn) {
+                                    elModal.current.classList.remove('modal-open')
+                                }
+                                else {
+                                 
+                                }
+
+                            }}>
+
+                                <svg className="cabinet" width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="avatar.svg" clip-path="url(#clip0_3_2875)">
                                         <g id="Layer_x0020_1">
                                             <g id="_1732704023632">
@@ -146,7 +179,50 @@ function Header() {
                                 </svg>
 
 
-                                Кабинет</div>
+                                Кабинет
+
+                                <div className="modal" ref={elModal} >
+                                    <ul className="modal-inner">
+                                        <li className="modal-links1">
+                                            <h2 className="modal-links1-title">Вход или создать личный кабинет</h2>
+                                            <form className="modal-links1-form">
+                                                <input type="text " placeholder="number" className="modal-links1-input" />
+                                                <button className="modal-links1-btn">olish</button>
+                                            </form>
+                                            <div className="modal-links1-websites">
+                                                <span className="modal-links1-websites-span"><img src={google} alt="error" /></span>
+                                                <span className="modal-links1-websites-span"><img src={facebook} alt="error" /></span>
+                                            </div>
+                                        </li>
+                                        <li className="modal-links2">
+                                            <button className="modal-close-btn" onClick={(()=>{
+                                                  elModal.current.classList.remove('modal-open')
+                                            })}><img className="modal-close-btn-img" src={close} alt="error"  /></button>
+                                            <ul className="modal-links2-link">
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link11} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Больше не нужно ходить на базар <span className="modal-links2-links-title-span">У нас выгодные цены и доставка до дома</span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link12} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Быстрая доставка<span className="modal-links2-links-title-span">Наш сервис удивит вас</span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link13} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Удобства для вас <span className="modal-links2-links-title-span">Быстрое оформление и гарантия на возврат в случае неисправности
+                                                    </span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"> <img src={link14} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Рассрочка<span className="modal-links2-links-title-span">Без предоплаты на 6 или 12 месяцев</span></h4>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
                         </div>
 
                     </nav>
@@ -154,7 +230,7 @@ function Header() {
                     <div id='sold-hover' className="sold-hover">
 
                         <div className="sold-content">
-                            
+
                         </div>
 
                         <a className='sold-hover-close' id='sold-close' href="#">X</a>
@@ -181,7 +257,7 @@ function Header() {
                         <ul className='bottom-nav_list'>
 
                             <li><a id='item-1' href="#">Все категории</a></li>
-                            <li><a id='item-2' href="#">Скидки</a></li> 
+                            <li><a id='item-2' href="#">Скидки</a></li>
                             <li><a id='item-3' href="#">Кондиционеры</a></li>
                             <li><a id='item-4' href="#">Новинки</a></li>
                             <li><a id='item-5' href="#">Книги</a></li>
