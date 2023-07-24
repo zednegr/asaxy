@@ -186,8 +186,10 @@ function Header() {
                                         <li className="modal-links1">
                                             <h2 className="modal-links1-title">Вход или создать личный кабинет</h2>
                                             <form className="modal-links1-form">
+                                                <span className="modal-links1-form-span">yoki</span>
+                                                <span className="modal-links1-form-span2">Telefon</span>
                                                 <input type="text " placeholder="number" className="modal-links1-input" />
-                                                <button className="modal-links1-btn">olish</button>
+                                                <button className="modal-links1-btn">Faollashtirish kodini oling</button>
                                             </form>
                                             <div className="modal-links1-websites">
                                                 <span className="modal-links1-websites-span"><img src={google} alt="error" /></span>

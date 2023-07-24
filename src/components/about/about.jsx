@@ -26,13 +26,17 @@ function About() {
                             <div className="close-btn1" ref={elBtn1} onClick={((evt) => {
                                 elModal.current.style.height = "45px"
                                 elModal.current.style.transition = "0.5s linear"
-                                elModal4.current.style.display = "none"
+                                setTimeout(()=>{
+                                    elModal4.current.style.display = "none" 
+                                },100)
                                 elBtn1.current.classList.remove("close-accordin1")
                             })}></div>
                             <div className="close-btn2" ref={elBtn2} onClick={(()=>{
                                  elModal3.current.style.height = "45px"
                                  elModal3.current.style.transition = "0.5s linear"
-                                 elModal2.current.style.display = "none"
+                                 setTimeout(()=>{
+                                     elModal2.current.style.display = "none"
+                                },100)
                                  elBtn2.current.classList.remove("close-accordin2")
                             })}>salom</div>
 
@@ -41,7 +45,7 @@ function About() {
                                 elModal.current.style.transition = "0.5s linear"
                                 setTimeout(() => {
                                     elModal4.current.style.display = "flex"
-                                }, 0.30)
+                                }, 200)
                                 elModal3.current.style.height = "45px"
                                 elModal3.current.style.transition = "0.5s linear"
                                 elModal2.current.style.display = "none"
@@ -50,6 +54,7 @@ function About() {
                             })}> Принцип работы компании
                                 <p class="accordin-content" ref={elModal4}>
                                     ждый покупатель должен в комфортных условиях выбрать телефоны и гаджеты максимально быстро, поэтому мы создали интуитивно понятное меню, которое легко освоить новым пользователям сети. Для большего удобства мы раздели меню на соответствующие разделы, в которых вы найдете более 15 тысяч разновидностей оргтехники и сопутствующих товаров. Выглядят они следующим образом:
+                                    <br />
                                     • посуда – здесь вы найдете самые необходимые атрибуты домашнего обихода, без которого не обходится наша повседневная жизни. Товары, представленные на сайте нашего магазина, обладают высоким качеством и прочностью;
                                     • кондиционеры и климатическая техника – раздел позволяет сделать полезные покупки в соответствии с вашими потребностями. К каждому товару имеется описание, которое позволит сделать правильный выбор;
                                     • телевизоры, видео и аудио находятся в следующем разделе, который достойно позиционируется как бытовая техника. Здесь представлены самые последние новинки и разработки, имеющие полномасштабный перечень функций, идущий в ногу со временем;
@@ -65,7 +70,7 @@ function About() {
                                 elModal3.current.style.transition = "0.5s linear"
                                 setTimeout(() => {
                                     elModal2.current.style.display = "flex"
-                                }, 0.30)
+                                }, 200)
                                 elModal.current.style.height = "45px"
                                 elModal.current.style.transition = "0.5s linear"
                                 elModal4.current.style.display = "none"
