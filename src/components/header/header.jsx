@@ -18,6 +18,9 @@ function Header() {
 
     const elInner = useRef()
 
+    const modal_hover = useRef()
+
+
     return (
         <section className="header-section">
 
@@ -99,7 +102,16 @@ function Header() {
 
                                 O'zbekcha</div>
 
-                            <div className="icon">
+                            <div className="icon" onClick={(evt) => {
+                                modal_hover.current.classList.add('modal_hover-open')
+
+                                console.log(evt.target);
+
+                                const modal_hover_close = evt.target.matches('.modal-hover')
+
+                               
+                            }}>
+
                                 <span className='sold-zero'>0</span>
 
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,7 +131,45 @@ function Header() {
                                     </defs>
                                 </svg>
 
-                                <a className='icon_title' href="#sold-hover">Корзинка</a></div>
+                                <a className='icon_title' href="#">Корзинка</a>
+
+                                <div className="modal_hover" ref={modal_hover} onClick={(evt) => {
+                                    if(evt.target.matches('.modal_hover')) {
+                                        modal_hover.current.classList.remove('modal_hover-open')
+
+                                        modal_hover.current.style.display = 'none'
+                                    }
+                                }}>
+                                    <div className="hoverModalInner">
+
+                                        <div className="hover-modal_content">
+                                        </div>
+
+                                        <div className="hover-modal_top">
+                                            <div className="hover-modal_summa">
+                                                <h5 className="hover-modal_summa-p">Miqdori</h5>
+                                            </div>
+                                            <div className="hover-modal_alSum">
+                                                <h5 className="hover-modal_alSum-p">0 so'm</h5>
+                                            </div>
+                                        </div>
+                                        <div className="hover-modal_middle">
+                                            <div className="hover-modal-btn-one">
+                                                <a className="hover-modal-link-one" href="#">Sotib olish</a>
+                                            </div>
+                                            <div className="hover-modal-btn-two">
+                                                <a className="hover-modal-link-two" href="#">Savatga o'tish</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
 
                             <div className="icon">
 
@@ -151,13 +201,13 @@ function Header() {
 
                                 console.log(evt.target);
 
-                                const elEevn = evt.target.matches('.modal') || evt.target.matches('.modal-close-btn') ||  evt.target.matches('.modal-close-btn-img') 
+                                const elEevn = evt.target.matches('.modal') || evt.target.matches('.modal-close-btn') || evt.target.matches('.modal-close-btn-img')
 
                                 if (elEevn) {
                                     elModal.current.classList.remove('modal-open')
                                 }
                                 else {
-                                 
+
                                 }
 
                             }}>
@@ -195,9 +245,9 @@ function Header() {
                                             </div>
                                         </li>
                                         <li className="modal-links2">
-                                            <button className="modal-close-btn" onClick={(()=>{
-                                                  elModal.current.classList.remove('modal-open')
-                                            })}><img className="modal-close-btn-img" src={close} alt="error"  /></button>
+                                            <button className="modal-close-btn" onClick={(() => {
+                                                elModal.current.classList.remove('modal-open')
+                                            })}><img className="modal-close-btn-img" src={close} alt="error" /></button>
                                             <ul className="modal-links2-link">
                                                 <li className="modal-links2-links">
                                                     <span className="modal-links2-link-img"><img src={link11} alt="error" width={59} height={57} /></span>
@@ -226,29 +276,6 @@ function Header() {
                         </div>
 
                     </nav>
-
-                    <div id='sold-hover' className="sold-hover">
-
-                        <div className="sold-content">
-
-                        </div>
-
-                        <a className='sold-hover-close' id='sold-close' href="#">X</a>
-
-                        <div className="sold-hover-about">
-
-                            <h5 className='sold-hover-h5'>Сумма</h5>
-
-                            <p className='sold-hover-p'>0 UZS</p>
-                        </div>
-
-                        <div className="sold-hover-btns">
-
-                            <a className='sold-hover-btn' href="#">Sold out</a>
-                            <a className='sold-hover-link' href="">Sold out</a>
-
-                        </div>
-                    </div>
 
                     {/* <- ==================== Navbar Bottom ===================== -> */}
 

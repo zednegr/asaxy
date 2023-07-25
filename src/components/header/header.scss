@@ -386,4 +386,84 @@ form {
     right: -15px;
     cursor: pointer;
 }
-// ==============================modal=========================
+// ============================== Hover modal =========================
+
+.modal_hover {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+
+    &-open {
+        display: flex;
+    }
+}
+
+.hoverModalInner {
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(223,241,255.44);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.hover-modal_content {
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 50px;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+}
+
+.hover-modal_top {
+    margin-top: 15px;
+    display: flex;
+    gap: 80%;
+
+
+    .hover-modal_summa-p {
+        font-size: 15px;
+        color: #000;
+    }
+
+    .hover-modal_alSum-p {
+        width: auto;
+        font-size: 15px;
+        color: #000;
+    }
+}
+
+.hover-modal_middle {
+    margin-top: 50px;
+
+    .hover-modal-link-one {
+        padding: 15px 150px;
+        border-radius: 10px;
+        background-color: #008dff;
+        font-size: 14px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .hover-modal-link-two {
+        padding: 15px 140px;
+        border-radius: 10px;
+        background-color: #008dff;
+        font-size: 14px;
+        color: #fff;
+    }
+}
