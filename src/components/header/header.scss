@@ -230,6 +230,7 @@ form {
         }
     }
 }
+
 // ===========================modal=============================
 .modal {
     display: none;
@@ -243,6 +244,7 @@ form {
     background-color: rgb(0, 0, 0, 0.3);
     align-items: center;
     justify-content: center;
+
     &-open {
         display: flex;
     }
@@ -263,7 +265,7 @@ form {
     height: 457px;
     display: flex;
     flex-direction: column;
-    background-color:#FFF;
+    background-color: #FFF;
     border-radius: 10px 0 0 10px;
     padding: 60px 56px;
     gap: 33px;
@@ -274,7 +276,8 @@ form {
         color: #000;
     }
 }
-.modal-links1-form{
+
+.modal-links1-form {
     width: 322px;
     height: 165px;
     background-color: transparent;
@@ -285,24 +288,27 @@ form {
     border-bottom: 1px solid #C2C6D1;
     border-radius: 0 0 0 0;
     position: relative;
-    &:hover{
+
+    &:hover {
         background-color: transparent;
     }
-    .modal-links1-form-span{
+
+    .modal-links1-form-span {
         position: absolute;
         bottom: -10px;
         left: 44%;
         background-color: white;
     }
-    .modal-links1-form-span2{
+
+    .modal-links1-form-span2 {
         position: absolute;
         top: -2px;
         left: 7px;
         background-color: white;
-        color:  #C2C6D1;
+        color: #C2C6D1;
     }
-    
-    .modal-links1-input{
+
+    .modal-links1-input {
         width: 315px;
         height: 40px;
         border-radius: 10px;
@@ -311,11 +317,13 @@ form {
         padding-right: 165px;
         padding-top: 13px;
         padding-bottom: 13px;
-        &:focus{
+
+        &:focus {
             outline: none;
         }
     }
-    .modal-links1-btn{
+
+    .modal-links1-btn {
         width: 315px;
         height: 45px;
         background-color: #007BFF;
@@ -326,12 +334,14 @@ form {
         font-size: 14px;
     }
 }
-.modal-links1-websites{
+
+.modal-links1-websites {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    .modal-links1-websites-span{
+
+    .modal-links1-websites-span {
         width: 123px;
         height: 45px;
         display: flex;
@@ -345,49 +355,51 @@ form {
 .modal-links2 {
     width: 50%;
     height: 457px;
-    background-color:#F2F2F7;
+    background-color: #F2F2F7;
     border-radius: 0 10px 10px 0;
     padding: 50px 35px;
     position: relative;
-    
-    .modal-links2-link{
+
+    .modal-links2-link {
         display: flex;
         flex-direction: column;
         gap: 30px;
 
-       .modal-links2-link-img{
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        background-color: #FFF;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       }
+        .modal-links2-link-img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
-    .modal-links2-links{
+    .modal-links2-links {
         display: flex;
         align-items: center;
         gap: 20px;
     }
 }
-.modal-links2-links-title{
-   width: 282px;
-   display: flex;
-   flex-direction: column;
-   text-align: start;
-   gap: 7px;
-   font-size: 16px;
-   color: #000;
-   .modal-links2-links-title-span{
-    font-size: 12px;
-    color: #BB988B;
-   }
+
+.modal-links2-links-title {
+    width: 282px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 7px;
+    font-size: 16px;
+    color: #000;
+
+    .modal-links2-links-title-span {
+        font-size: 12px;
+        color: #BB988B;
+    }
 }
 
 
-.modal-close-btn{
+.modal-close-btn {
     width: 35px;
     height: 35px;
     display: flex;
@@ -400,6 +412,7 @@ form {
     right: -15px;
     cursor: pointer;
 }
+
 // ============================== Hover modal =========================
 
 .modal_hover {
@@ -416,6 +429,7 @@ form {
     &-open {
         display: flex;
     }
+
 }
 
 .hoverModalInner {
@@ -425,7 +439,7 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(223,241,255.44);
+    background-color: rgba(223, 241, 255.44);
     border-radius: 10px;
     padding: 20px;
 }
@@ -433,7 +447,7 @@ form {
 .hover-modal_content {
     position: absolute;
     top: 0;
-    left:50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 450px;
     height: 50px;
@@ -447,7 +461,6 @@ form {
     margin-top: 15px;
     display: flex;
     gap: 80%;
-
 
     .hover-modal_summa-p {
         font-size: 15px;

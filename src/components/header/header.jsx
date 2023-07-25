@@ -20,6 +20,7 @@ function Header() {
 
     const modal_hover = useRef()
 
+    const modal_icon = useRef()
 
     return (
         <section className="header-section">
@@ -102,12 +103,13 @@ function Header() {
 
                                 O'zbekcha</div>
 
-                            <div className="icon" onClick={(evt) => {
+                            <div className="icon" ref={modal_icon} onClick={(evt) => {
+                                
                                 modal_hover.current.classList.add('modal_hover-open')
 
                                 console.log(evt.target);
 
-                                const modal_hover_close = evt.target.matches('.modal-hover')
+                                // const modal_hover_close = evt.target.matches('.modal-hover')
 
                                
                             }}>
@@ -131,7 +133,7 @@ function Header() {
                                     </defs>
                                 </svg>
 
-                                <a className='icon_title' href="#">Корзинка</a>
+                                Корзинка
 
                                 <div className="modal_hover" ref={modal_hover} onClick={(evt) => {
                                     if(evt.target.matches('.modal_hover')) {
@@ -155,21 +157,16 @@ function Header() {
                                         </div>
                                         <div className="hover-modal_middle">
                                             <div className="hover-modal-btn-one">
-                                                <a className="hover-modal-link-one" href="#">Sotib olish</a>
+                                                <a className="hover-modal-link-one btn-slide" href="#">Sotib olish</a>
                                             </div>
                                             <div className="hover-modal-btn-two">
-                                                <a className="hover-modal-link-two" href="#">Savatga o'tish</a>
+                                                <a className="hover-modal-link-two btn-slide" href="#">Savatga o'tish</a>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
 
                             <div className="icon">
 
