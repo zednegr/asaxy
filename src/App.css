@@ -35,13 +35,11 @@ img {
 
 .btn-slide {
   position: relative;
-  padding: 9px 46px;
   border-radius: 10px;
-  background-color: #008dff;
   border: none;
-  color: #fff;
   cursor: pointer;
   z-index: 1;
+  transition: color 0.4s linear;
 }
 
 .btn-slide::before {
@@ -54,7 +52,7 @@ img {
   background-color: #1166ab;
   border-radius: 10px;
   z-index: -1;
-  transition: transform 0.6s;     
+  transition: transform 0.4s ease-in-out;     
   transform-origin: 0 0;
   transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }

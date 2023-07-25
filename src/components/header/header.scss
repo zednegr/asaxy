@@ -489,8 +489,11 @@ form {
     .hover-modal-link-two {
         padding: 15px 140px;
         border-radius: 10px;
-        background-color: #008dff;
         font-size: 14px;
-        color: #fff;
+        color: #000;
+
+        &:hover {
+            color: #fff;
+        }
     }
 }
