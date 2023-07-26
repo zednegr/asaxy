@@ -1,9 +1,26 @@
+import { useRef, useEffect } from "react"
 import './header.scss'
 import NavLogo from "../../assets/svg/asaxy-logo.svg"
 import SearchIcon from "../../assets/svg/search-icon.svg"
+import google from "../../assets/imgs/modal-inner-form-google.png"
+import facebook from "../../assets/imgs/modal-inner-form-facebook.png"
 
+import link11 from "../../assets/svg/section-link1-links-market.svg"
+import link12 from "../../assets/svg/section-link1-links-fast-delivery.svg"
+import link13 from "../../assets/svg/section-link1-links-return.svg"
+import link14 from "../../assets/svg/section-link1-links-card.svg"
+
+import close from "../../assets/imgs/modal-close-btn.png"
 
 function Header() {
+
+    const elModal = useRef()
+
+    const elInner = useRef()
+
+    const modal_hover = useRef()
+
+    const modal_icon = useRef()
 
     return (
         <section className="header-section">
@@ -86,7 +103,17 @@ function Header() {
 
                                 O'zbekcha</div>
 
-                         <div className="icon">
+                            <div className="icon" ref={modal_icon} onClick={(evt) => {
+                                
+                                modal_hover.current.classList.add('modal_hover-open')
+
+                                console.log(evt.target);
+
+                                // const modal_hover_close = evt.target.matches('.modal-hover')
+
+                               
+                            }}>
+
                                 <span className='sold-zero'>0</span>
 
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +133,40 @@ function Header() {
                                     </defs>
                                 </svg>
 
-                                <a className='icon_title' href="#sold-hover">Корзинка</a></div>
+                                Корзинка
+
+                                <div className="modal_hover" ref={modal_hover} onClick={(evt) => {
+                                    if(evt.target.matches('.modal_hover')) {
+                                        modal_hover.current.classList.remove('modal_hover-open')
+
+                                        modal_hover.current.style.display = 'none'
+                                    }
+                                }}>
+                                    <div className="hoverModalInner">
+
+                                        <div className="hover-modal_content">
+                                        </div>
+
+                                        <div className="hover-modal_top">
+                                            <div className="hover-modal_summa">
+                                                <h5 className="hover-modal_summa-p">Miqdori</h5>
+                                            </div>
+                                            <div className="hover-modal_alSum">
+                                                <h5 className="hover-modal_alSum-p">0 so'm</h5>
+                                            </div>
+                                        </div>
+                                        <div className="hover-modal_middle">
+                                            <div className="hover-modal-btn-one">
+                                                <a className="hover-modal-link-one btn-slide" href="#">Sotib olish</a>
+                                            </div>
+                                            <div className="hover-modal-btn-two">
+                                                <a className="hover-modal-link-two btn-slide" href="#">Savatga o'tish</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
 
                             <div className="icon">
 
@@ -127,9 +187,29 @@ function Header() {
 
                                 Избранное</div>
 
-                            <div className="icon">
+                            <div className="icon" onClick={(evt) => {
 
-                                <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                elModal.current.classList.add("modal-open")
+                                setTimeout(() => {
+                                    elInner.current.style.position = "static"
+                                    elInner.current.style.transition = "0.5s linear"
+
+                                }, 1000)
+
+                                console.log(evt.target);
+
+                                const elEevn = evt.target.matches('.modal') || evt.target.matches('.modal-close-btn') || evt.target.matches('.modal-close-btn-img')
+
+                                if (elEevn) {
+                                    elModal.current.classList.remove('modal-open')
+                                }
+                                else {
+
+                                }
+
+                            }}>
+
+                                <svg className="cabinet" width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="avatar.svg" clip-path="url(#clip0_3_2875)">
                                         <g id="Layer_x0020_1">
                                             <g id="_1732704023632">
@@ -146,33 +226,55 @@ function Header() {
                                 </svg>
 
 
-                                Кабинет</div>
+                                Кабинет
+
+                                <div className="modal" ref={elModal} >
+                                    <ul className="modal-inner">
+                                        <li className="modal-links1">
+                                            <h2 className="modal-links1-title">Вход или создать личный кабинет</h2>
+                                            <form className="modal-links1-form">
+                                                <span className="modal-links1-form-span">yoki</span>
+                                                <span className="modal-links1-form-span2">Telefon</span>
+                                                <input type="text " placeholder="number" className="modal-links1-input" />
+                                                <button className="modal-links1-btn">Faollashtirish kodini oling</button>
+                                            </form>
+                                            <div className="modal-links1-websites">
+                                                <span className="modal-links1-websites-span"><img src={google} alt="error" /></span>
+                                                <span className="modal-links1-websites-span"><img src={facebook} alt="error" /></span>
+                                            </div>
+                                        </li>
+                                        <li className="modal-links2">
+                                            <button className="modal-close-btn" onClick={(() => {
+                                                elModal.current.classList.remove('modal-open')
+                                            })}><img className="modal-close-btn-img" src={close} alt="error" /></button>
+                                            <ul className="modal-links2-link">
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link11} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Больше не нужно ходить на базар <span className="modal-links2-links-title-span">У нас выгодные цены и доставка до дома</span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link12} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Быстрая доставка<span className="modal-links2-links-title-span">Наш сервис удивит вас</span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"><img src={link13} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Удобства для вас <span className="modal-links2-links-title-span">Быстрое оформление и гарантия на возврат в случае неисправности
+                                                    </span></h4>
+                                                </li>
+                                                <li className="modal-links2-links">
+                                                    <span className="modal-links2-link-img"> <img src={link14} alt="error" width={59} height={57} /></span>
+                                                    <h4 className="modal-links2-links-title">Рассрочка<span className="modal-links2-links-title-span">Без предоплаты на 6 или 12 месяцев</span></h4>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
                         </div>
 
                     </nav>
-
-                    <div id='sold-hover' className="sold-hover">
-
-                        <div className="sold-content">
-                            
-                        </div>
-
-                        <a className='sold-hover-close' id='sold-close' href="#">X</a>
-
-                        <div className="sold-hover-about">
-
-                            <h5 className='sold-hover-h5'>Сумма</h5>
-
-                            <p className='sold-hover-p'>0 UZS</p>
-                        </div>
-
-                        <div className="sold-hover-btns">
-
-                            <a className='sold-hover-btn' href="#">Sold out</a>
-                            <a className='sold-hover-link' href="">Sold out</a>
-
-                        </div>
-                    </div>
 
                     {/* <- ==================== Navbar Bottom ===================== -> */}
 
@@ -181,7 +283,7 @@ function Header() {
                         <ul className='bottom-nav_list'>
 
                             <li><a id='item-1' href="#">Все категории</a></li>
-                            <li><a id='item-2' href="#">Скидки</a></li> 
+                            <li><a id='item-2' href="#">Скидки</a></li>
                             <li><a id='item-3' href="#">Кондиционеры</a></li>
                             <li><a id='item-4' href="#">Новинки</a></li>
                             <li><a id='item-5' href="#">Книги</a></li>

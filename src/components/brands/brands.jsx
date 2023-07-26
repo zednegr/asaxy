@@ -42,7 +42,7 @@ function Brands() {
                                     spaceBetween: 50,
                                 },
                             }}
-                            modules={[Pagination]}
+                            // modules={[Pagination]}
                             className="mySwiper"
                         >
                         <SwiperSlide><a className="swiper-a" href="#"><img src="https://assets.asaxiy.uz/brand/webp//5e15c4ec85cf2.webp" alt="error" /></a></SwiperSlide>

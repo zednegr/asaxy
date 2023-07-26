@@ -75,7 +75,7 @@
 
 
 
-.kupit {
+.btn-slide {
     position: relative;
     padding: 10px 60px 10px 50px;
     text-align: center;
@@ -88,10 +88,7 @@
     background: #008DFF;
     cursor: pointer;
     border: none;
-    &:hover{
-        // transform: translateY(5px);
-        background: #0059a1;
-    }
+    
 
 
 }

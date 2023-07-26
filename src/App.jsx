@@ -7,8 +7,7 @@ import Apps from './components/apps/apps'
 import Section from './components/section/section'
 import Cards from './components/cards/cards'
 import CardsInner from './components/card-inner/card-inner'
-
-
+import About from './components/about/about'
 function App() {
 
   return (
@@ -16,6 +15,7 @@ function App() {
     <Header />
     <Hero />
     <Cards/>
+    <About/>
     <Brands/>
     <Apps/>
     <Section/>

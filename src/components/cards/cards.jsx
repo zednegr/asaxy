@@ -44,7 +44,7 @@ function Cards() {
                                     {/* <p>{item.brend}</p> */}
 
 
-                                    <button className="kupit">Купить в 1 клик</button>
+                                    <button className="btn-slide">Купить в 1 клик</button>
 
                                 </div>
 
