@@ -22,6 +22,8 @@ function Header() {
 
     const modal_icon = useRef()
 
+    const icon11= useRef()
+
     return (
         <section className="header-section">
 
@@ -103,15 +105,10 @@ function Header() {
 
                                 O'zbekcha</div>
 
-                            <div className="icon" ref={modal_icon} onClick={(evt) => {
-                                
+                            <div className="icon" onClick={(evt) => {
+
                                 modal_hover.current.classList.add('modal_hover-open')
 
-                                console.log(evt.target);
-
-                                // const modal_hover_close = evt.target.matches('.modal-hover')
-
-                               
                             }}>
 
                                 <span className='sold-zero'>0</span>
@@ -134,37 +131,37 @@ function Header() {
                                 </svg>
 
                                 Корзинка
+                            </div>
 
-                                <div className="modal_hover" ref={modal_hover} onClick={(evt) => {
-                                    if(evt.target.matches('.modal_hover')) {
-                                        modal_hover.current.classList.remove('modal_hover-open')
+                            <div className="modal_hover" ref={modal_hover} onClick={(evt) => {
+                                if (evt.target.matches('.modal_hover')) {
+                                    modal_hover.current.classList.remove('modal_hover-open')
+                                    console.log("true");
+                                }
 
-                                        modal_hover.current.style.display = 'none'
-                                    }
-                                }}>
-                                    <div className="hoverModalInner">
+                            }}>
+                                <div className="hoverModalInner">
 
-                                        <div className="hover-modal_content">
-                                        </div>
-
-                                        <div className="hover-modal_top">
-                                            <div className="hover-modal_summa">
-                                                <h5 className="hover-modal_summa-p">Miqdori</h5>
-                                            </div>
-                                            <div className="hover-modal_alSum">
-                                                <h5 className="hover-modal_alSum-p">0 so'm</h5>
-                                            </div>
-                                        </div>
-                                        <div className="hover-modal_middle">
-                                            <div className="hover-modal-btn-one">
-                                                <a className="hover-modal-link-one btn-slide" href="#">Sotib olish</a>
-                                            </div>
-                                            <div className="hover-modal-btn-two">
-                                                <a className="hover-modal-link-two btn-slide" href="#">Savatga o'tish</a>
-                                            </div>
-                                        </div>
-
+                                    <div className="hover-modal_content">
                                     </div>
+
+                                    <div className="hover-modal_top">
+                                        <div className="hover-modal_summa">
+                                            <h5 className="hover-modal_summa-p">Miqdori</h5>
+                                        </div>
+                                        <div className="hover-modal_alSum">
+                                            <h5 className="hover-modal_alSum-p">0 so'm</h5>
+                                        </div>
+                                    </div>
+                                    <div className="hover-modal_middle">
+                                        <div className="hover-modal-btn-one">
+                                            <a className="hover-modal-link-one btn-slide" href="#">Sotib olish</a>
+                                        </div>
+                                        <div className="hover-modal-btn-two">
+                                            <a className="hover-modal-link-two btn-slide" href="#">Savatga o'tish</a>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
