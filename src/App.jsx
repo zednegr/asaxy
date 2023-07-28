@@ -1,28 +1,21 @@
 import './App.css'
+import { Routes, Route } from "react-router-dom"
 import Footer from './components/footer/footer'
 import Header from './components/header/header.jsx'
-import Hero from './components/hero/hero'
-import Brands from './components/brands/brands'
-import Apps from './components/apps/apps'
-import Section from './components/section/section'
-import Cards from './components/cards/cards'
+
 import CardsInner from './components/card-inner/card-inner'
-import About from './components/about/about'
+import Home from './pages/home'
 function App() {
 
   return (
     <>
-    <Header />
-    <Hero />
-    <Cards/>
-    <About/>
-    <Brands/>
-    <Apps/>
-    <Section/>
-    <Footer />
-    <CardsInner />
-  
-  </> 
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/card_inner' element={<CardsInner />} />
+      </Routes>
+      <Footer />
+    </>
   )
 }
 
