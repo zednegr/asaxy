@@ -1,4 +1,11 @@
 import { NavLink } from 'react-router-dom';
+
+// import react rating
+import React from 'react'; 
+import { Rating } from 'primereact/rating';
+import "primereact/resources/themes/lara-light-indigo/theme.css"; 
+import "primereact/resources/primereact.min.css"; 
+
 import "./cards.scss"
 import { comeData } from "../../data/data"
 import icon from "../../assets/svg/@2x.svg"
